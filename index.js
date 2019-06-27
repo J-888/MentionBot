@@ -4,11 +4,28 @@ const Discord = require('discord.js');
 // Local hosting
 require('dotenv').config()
 
+// Glitch hosting
+/*
+const http = require('http');
+const express = require('express');
+const app = express();
+app.get("/", (request, response) => {
+  console.log(Date.now() + " Ping Received");
+  response.sendStatus(200);
+});
+app.listen(process.env.PORT);
+setInterval(() => {
+  http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
+}, 280000);
+*/
+
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
 
 client.config = require("./config.json");
 client.config.token = process.env.TOKEN;
+
+require("./custom_functions.js")(client);
 
 client.util = require('util');
 client.util.inspect.defaultOptions = { showHidden: false, depth: 2, colors: false, customInspect: true, showProxy: false, maxArrayLength: 100, breakLength: 80, compact: true }
