@@ -6,7 +6,7 @@ module.exports = {
 	args: false,
 	async execute(message, args) {
 		if(message.member.hasPermission("MENTION_EVERYONE")){
-			message.channel.send(message.channel.members.filter(member => member.presence.status == 'online').random(1).toString());
+			message.channel.send(message.channel.members.filter(member => member.presence.status == 'online').random(1).toString()+' was randomly chosen (online only)');
 		}
 		else{
 			message.reply("you don't have permission to mention everyone")
