@@ -1,0 +1,23 @@
+{
+  "name": "mentionbot",
+  "version": "1.0.0",
+  "description": "Productivity bot developed for the Discord Hack Week 2019 that extends the Discord default mention funcionality",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "J-888",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/username/repository.git"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "~11.5.1",
+    "dotenv": "^8.0.0"
+  },
+  "engines": {
+    "node": "^10"
+  }
+}
